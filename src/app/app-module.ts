@@ -1,19 +1,20 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { BmiModule } from './bmi/bmi.module';
 
 @NgModule({
-  declarations: [
-    App
-  ],
+  declarations: [App],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    BmiModule
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-  ],
+  providers: [],
   bootstrap: [App]
 })
-export class AppModule { }
+export class AppModule {}

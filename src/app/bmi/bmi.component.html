@@ -1,0 +1,58 @@
+<div class="title">
+  <h1>Twój kalkulator BMI</h1>
+</div>
+
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Imię</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Nazwisko</mat-label>
+    <input matInput formControlName="surname">
+    <mat-error>Wpisz co najmniej 3 znaki.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Wiek</mat-label>
+    <input matInput type="number" formControlName="age">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Waga (kg)</mat-label>
+    <input matInput type="number" formControlName="weight">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Wzrost (cm)</mat-label>
+    <input matInput type="number" formControlName="height">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email">
+    <mat-error>Wpisz poprawny adres email.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Płeć</mat-label>
+    <mat-select formControlName="gender">
+      <mat-option value="man">Mężczyzna</mat-option>
+      <mat-option value="woman">Kobieta</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="consent">
+    Zgoda marketingowa
+  </mat-checkbox>
+
+  <button mat-raised-button color="primary" type="submit"
+          [disabled]="userForm.invalid">
+    Oblicz BMI
+  </button>
+</form>
+
+<mat-card *ngIf="bmi !== null">
+  <mat-card-content>Twoje BMI: {{ bmi }}</mat-card-content>
+</mat-card>
