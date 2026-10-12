@@ -54,5 +54,9 @@
 </form>
 
 <mat-card *ngIf="bmi !== null">
-  <mat-card-content>Twoje BMI: {{ bmi }}</mat-card-content>
+  <mat-card-content>
+    <h2>Twój wynik BMI</h2>
+    <p>Twoje BMI: {{ bmi }}</p>
+    <p>{{ bmiDescription }}</p>
+  </mat-card-content>
 </mat-card>
