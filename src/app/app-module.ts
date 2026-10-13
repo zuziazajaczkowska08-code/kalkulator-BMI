@@ -4,15 +4,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { BmiModule } from './bmi/bmi.module';
 
 @NgModule({
   declarations: [App],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    BmiModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [App]

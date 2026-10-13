@@ -10,11 +10,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { BmiRoutingModule } from './bmi-routing.module';
+
 
 @NgModule({
   declarations: [BmiComponent],
   imports: [
     CommonModule,
+    BmiRoutingModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
